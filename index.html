@@ -5,10 +5,15 @@
     <title>Shopping List</title>
   </head>
   <body>
+    <form class = "shopping-list-form" method="post">
     <h1>Shopping List</h1>
-      <input type="text" name="Add an item" value="Submit">
-
-
+    <label for = "add-an-item">Add an item</legend>
+      <input placeholder="e.g., broccoli" type="text" name="add-an-item" id="inputItem"/>
+      <button type="button">Add Item</button>
+      <section class="list items">
+      </section>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
