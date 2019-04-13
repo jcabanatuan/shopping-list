@@ -1,5 +1,6 @@
 $(function() {
-  $("button").click(function(event) {
+  $("#js-shopping-list-form").submit(function(event) {
+    event.preventDefault();
     const listItem = document.getElementById('shopping-list-entry').value;
     $(".shopping-list").append(
       `<li>
@@ -22,7 +23,7 @@ $(function() {
 
 function handleItemChecked() {
   $("ul").on("click",'.shopping-item-toggle',function(event) {
-    $(this).closest("li").find('.shopping-item').toggleClass("shopping-item shopping-item__checked");
+    $(this).closest("li").find('.shopping-item').toggleClass("shopping-item__checked");
   });
 }
 $(handleItemChecked);
